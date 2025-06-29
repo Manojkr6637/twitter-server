@@ -1,3 +1,10 @@
+Feature build:
+- Google sign in
+- JWtoken
+- S3 Bucket
+- IAM
+
+
 1. npm i @apollo/server graphql
 2. npm i tsc-watch -D
 3. npm i typescripts -D
@@ -168,3 +175,29 @@ It will take time to digest and practice and learn a lot more and
 ORM concept is powrfull for laravel , Node js
 
 and python
+
+
+==============S3==
+Create s3 bucket for profile storage
+- Assign policy
+- CORS
+
+
+
+Redis: Open source , In memory database, use as a database base, cache, streaming engine, and message broker
+
+https://upstash.com/
+Servless redis on cloud. It is cloud for Redis, kafka , 
+
+Rate limiting:
+
+
+Use redis for cachigna rate limiting, Recommedation and 
+Set up redis and Rate limiting and  caching
+
+
+
+==================Deployment====
+EC2 Instance
+Elastic IP
+

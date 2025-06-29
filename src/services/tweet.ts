@@ -1,4 +1,5 @@
 import { prismaClient } from "../clients/db";
+import redisClient from "../clients/redis";
 
 export interface CreateTweetPayload {
 
@@ -9,14 +10,21 @@ export interface CreateTweetPayload {
 
 class TweetService {
 
-  public static createTweet(data: CreateTweetPayload){
+  public static async createTweet(data: CreateTweetPayload){
+    const rateLimitFlag = await redisClient.get(`RATE_LIMIT:TWEET:${data.userId}`); 
 
-    return prismaClient.tweet.create({data:{
+    if(rateLimitFlag)  throw Error('Please wait....');
+    
+    const tweet = prismaClient.tweet.create({data:{
         content: data.content,
         imageURL: data.imageURL,
         auther: {connect: {id: data.userId}}
 
     }})
+    await redisClient.setex(`RATE_LIMIT:TWEET:${data.userId}`, 10, 1)
+    await redisClient.del('ALL_TWEETS');
+
+    return tweet
 
   }
 

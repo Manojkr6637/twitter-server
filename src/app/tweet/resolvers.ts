@@ -5,6 +5,7 @@ import { GraphqlContext } from "../../interfaces";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import UserService from "../../services/user";
 import TweetService, { CreateTweetPayload } from "../../services/tweet";
+import redisClient from "../../clients/redis";
 
 const s3Client = new S3Client({})
 
@@ -38,6 +39,7 @@ const queries = {
 
         const allowedImageTypes = ["image/jpg", "image/jpeg", "image/png", "image/webp"]
 
+
         if(!allowedImageTypes.includes(imageType))
             throw new Error("Unsupported Image Type");
 
@@ -47,6 +49,8 @@ const queries = {
             Key: `uploads/${ctx.user.id}/tweets/${imageName}-${Date.now()}`
         });
         const signedURL = await getSignedUrl(s3Client, putObjectCommand);
+        console.log("Redis clientttt===")
+        // redisClient.set('USERPROFILE-'+ctx.user.id, JSON.stringify(ctx.user))
 
         return signedURL;
     }
