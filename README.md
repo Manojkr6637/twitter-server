@@ -1,3 +1,10 @@
+Complete Full stack Application:
+Devops:
+Backend:
+DB:
+Frontend: NextJS, Tailwind, and CSS
+CDN: Cloudfront
+
 Feature build:
 - Google sign in
 - JWtoken
@@ -166,7 +173,7 @@ uid: sah123manoj@gmail.com
 pass:Developer$123 
 pass:So4tBhjjlr8VQzSz
 
-npx prisma migrate dev added_user_model
+ dev added_user_model
 npx prisma studio
 
 Looks overwhelming but fruitfulls:
@@ -201,3 +208,23 @@ Set up redis and Rate limiting and  caching
 EC2 Instance
 Elastic IP
 
+Install Node js
+
+Process Management Tool(PM2)
+ PM2 is a Production Process Manager for Node.js applications
+                     with a built-in Load Balancer.
+
+
+SSL Certificate:
+Create Target Group
+Create load balancer
+create cache-policy
+
+
+============Clean all==
+- Cloud front
+- Load balacer
+- Target groupd
+- Elatic IP
+- Security Group
+- S3
