@@ -5,7 +5,7 @@ import { GraphqlContext } from "../../interfaces";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import UserService from "../../services/user";
 import TweetService, { CreateTweetPayload } from "../../services/tweet";
-import redisClient from "../../clients/redis";
+// import redisClient from "../../clients/redis";
  console.log("AWS_REGION:", process.env.AWS_DEFAULT_REGION,  process.env.AWS_S3_BUCKET);
 const s3Client = new S3Client({ region: process.env.AWS_DEFAULT_REGION || "ap-south-1" })
 

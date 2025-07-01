@@ -1,9 +1,9 @@
-import Redis from "ioredis"
+// import Redis from "ioredis"
 
-const redisClient = new Redis(process.env.REDIS_CLIENT ||'');
+// const redisClient = new Redis(process.env.REDIS_CLIENT ||'');
  
 
-export default redisClient;
+// export default redisClient;
 
 //  redisClient.set('USERPROFILE-'+ctx.user.id, JSON.stringify(ctx.user))
 // redisClient.del('USERPROFILE-'+ctx.user.id)
