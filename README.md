@@ -79,20 +79,22 @@ Follow, unfollow, recommendation
 It is juggling but fruitfull results
 
 I feel more confinent
-using grapQL, Prisma, Next js, SSG, S3 bukct
+using grapQL, tailwind, Nextjs, Prisma, Next js, SSG, S3 bucket, Redis, Potgres and EC2:
+
+
 
 Differents tools, library, reacto , better code
 Schema design:
 
-A bit complex: Recommendation feature, follow and unfollow
+A bit complex: Recommendation feature, follow and unfollow feature but fruitfull
+ How to write complex query in grapjhql.
 =======================
 GraphQL:
 
 Typedefs: Schema Define
 query: getQury
 mutations->Values add or create
-
-resolvers
+resolvers:
 
 
 What my observation, 
@@ -102,7 +104,10 @@ How to better code
 I love this type of course, content
 
 
-Kudos Piyush, Wait for more this type of full fledge coursse to related industry standinr not like course
+Kudos Piyush, Wait for more this type of full fledge coursse to related industry standinng
+Directly work production ready web applications.
+
+ not like course
 
 add more values than others course
 
@@ -122,7 +127,7 @@ add more values than others course
  I love faill love with 
 
  I can write css as much as Writte engllins, 
- It totally change wrritter,
+ It totally change writting csss as Plain Engilish,
  Much easy, simlple , no functions
  Ir projdctoc t ready
  Use and give a try it,
@@ -157,21 +162,7 @@ Next js
 Primsa
 GraphQL
 NodeJs
-suberbase
-pass:gk4PEgUz4RTasAU5
 
-twitter-next-dev
-pass:gQnIpyyL7flTBLYU
-
-npm i primsa --save-dev
-postgresql://postgres:gQnIpyyL7flTBLYU@db.ielmpmvgdlgcvqsnmbav.supabase.co:5432/postgres
-postgresql://postgres:gQnIpyyL7flTBLYU@db.hqzawciworrihsbcmtqp.supabase.co:5432/postgres
-
-
-========================Supbase=====
-uid: sah123manoj@gmail.com
-pass:Developer$123 
-pass:So4tBhjjlr8VQzSz
 
  dev added_user_model
 npx prisma studio
@@ -199,7 +190,7 @@ Servless redis on cloud. It is cloud for Redis, kafka ,
 Rate limiting:
 
 
-Use redis for cachigna rate limiting, Recommedation and 
+Use redis for cachig, rate limiting, Recommedation and 
 Set up redis and Rate limiting and  caching
 
 
@@ -228,3 +219,7 @@ create cache-policy
 - Elatic IP
 - Security Group
 - S3
+
+==============Production deployent===
+pm2 status
+pm2 restart build/index
